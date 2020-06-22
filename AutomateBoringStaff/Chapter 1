@@ -1,1 +1,13 @@
 input() function always returns a STRING
+
+>>> 42 == '42'
+False
+>>> 42 == 42.0
+True
+>>> 42.0 == 0042.000
+True
+
+>>> int(1.25)
+1
+>>> int(1.99)
+1
