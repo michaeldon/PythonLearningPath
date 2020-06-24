@@ -1,0 +1,16 @@
+def hello(name):
+  print('Hello ' + name)
+hello('Alice') hello('Bob')
+
+#函数调用完之后，parameter是释放掉的
+
+try:
+    print('please input a integar', end='\n')
+    a = int(input())
+    while True:
+        a = collatz(a)
+        if a == 1:
+            break
+except ValueError:
+    print('not integar input')
+try...except可以进行error编写
