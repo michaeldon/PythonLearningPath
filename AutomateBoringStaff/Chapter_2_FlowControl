@@ -22,3 +22,8 @@ True (after all, 3000 is greater than 100) u, the string 'You are not Alice,
 grannie.' is printed, and the rest of the elif statements are automatically
 skipped. 
 ### Remember, at most only one of the clauses will be executed, andfor elif statements, the order matters!
+对于if语句来说，顺序是重要的
+
+while语句中：
+break：跳出当前循环
+continue：重新验证循环
