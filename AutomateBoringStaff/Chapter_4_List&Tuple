@@ -1,0 +1,34 @@
+In a slice, the first integer is the index where the slice starts. 
+The second integer is the index where the slice ends. 
+A slice goes up to, but will not include, the value at the second index. 
+A slice evaluates to a new list value.
+
+>>> spam = ['cat', 'bat', 'rat', 'elephant'] >>> spam[0:4]
+['cat', 'bat', 'rat', 'elephant']
+>>> spam[1:3]
+['bat', 'rat']
+>>> spam[0:-1] ['cat', 'bat', 'rat']
+
+del()函数用来删除list数据
+>>> spam = ['cat', 'bat', 'rat', 'elephant'] >>> del spam[2]
+>>> spam
+['cat', 'bat', 'elephant']
+
+list如何进行分解赋值
+>>> cat = ['fat', 'black', 'loud'] >>> size = cat[0]
+>>> color = cat[1]
+>>> disposition = cat[2]
+you could type this line of code:
+>>> cat = ['fat', 'black', 'loud'] 
+>>> size, color, disposition = cat
+
+list的method
+list.append()后面添加
+list.index()找到一个值得index
+list.insert(index=N,str)在index N之前插入str
+list.remove()除去某个value，如果多个重复值，只删除第一个
+
+You can also split up a single instruction across multiple lines using the \ line continuation character at the end . 
+Think of \ as saying, “This instruction continues on the next line .” 
+The indentation on the line after a \ line continua- tion is not significant . For example, the following is valid Python code:
+print('Four score and seven ' + \ 'years ago...')
