@@ -32,3 +32,24 @@ You can also split up a single instruction across multiple lines using the \ lin
 Think of \ as saying, “This instruction continues on the next line .” 
 The indentation on the line after a \ line continua- tion is not significant . For example, the following is valid Python code:
 print('Four score and seven ' + \ 'years ago...')
+
+Reference
+#列表实际上是一个指向地址的指针
+When you assign a list to a variable, you are actually assigning a list reference to the variable. 
+A reference is a value that points to some bit of data, and a list reference is a value that points to a list. 
+>>> spam = [0, 1, 2, 3, 4, 5] v>>> cheese = spam
+>>> cheese[1] = 'Hello!'
+>>> spam
+[0, 'Hello!', 2, 3, 4, 5] 
+>>> cheese
+[0, 'Hello!', 2, 3, 4, 5]
+
+用copy.copy()去进行复制
+>>> import copy
+>>> spam = ['A', 'B', 'C', 'D'] 
+>>> cheese = copy.copy(spam) 
+>>> cheese[1] = 42
+>>> spam
+['A', 'B', 'C', 'D']
+>>> cheese
+['A', 42, 'C', 'D']
