@@ -1,0 +1,33 @@
+字典 vs 列表
+1. 字典没有顺序概念
+2. 因为没有顺序，所以不能切片
+
+>>> spam = {'color': 'red', 'age': 42} >>> for k, v in spam.items():
+print('Key: ' + k + ' Value: ' + str(v))
+Key: age Value: 42
+Key: color Value: red
+针对dict三个函数
+spam.key()返回dict.key
+spam.value()返回dict.value
+spam.item() 返回tuple
+
+get() method 只有查询作用
+the key of the value to retrieve and a fallback value to return if that key does not exist.
+>>> picnicItems = {'apples': 5, 'cups': 2}
+>>> 'I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.' 'I am bringing 2 cups.'
+>>> 'I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.' 'I am bringing 0 eggs.'
+
+
+setdefault() method 查询作用，同时设置默认值和get()区别是增加一组dict
+The first argument passed to the method is the key to check for, 
+and the second argument is the value to set at that key if the key does not exist. 
+
+>>> spam = {'name': 'Pooka', 'age': 5} 
+>>> spam.setdefault('color', 'black') 
+'black'
+>>> spam
+{'color': 'black', 'age': 5, 'name': 'Pooka'} 
+>>> spam.setdefault('color', 'white')
+'black'
+>>> spam
+{'color': 'black', 'age': 5, 'name': 'Pooka'}
