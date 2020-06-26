@@ -1,0 +1,59 @@
+Escape character
+\'    Single quote
+\"    Double quote
+\t    Tab
+\n    Newline (line break) Backslash
+\\    slash
+
+raw strings: 忽视里面所有内容
+>>> print(r'That is Carol\'s cat.') 
+That is Carol\'s cat.
+
+Multiline Strings with triple Quotes：三个单引号直接内部分行
+
+Multiple line comments: 可以使用三个双引号
+
+string.upper()  获得一个新string，全大写
+string.lower()  获得一个新string，全小写
+string.isupper()  至少一个字母，全部是大写
+string.islower()  至少一个字母，全部小写
+str.isalpha() 只包含字母且不是空
+str.isalnum() 只包含字母和数字且不是空
+str.isdecimal() 只包含数字且不是空
+str.isspace() 只包含空格、tab和换行
+str.istitle() 字符大写开头
+str.startwith() 字符以什么开头
+str.endwith() 字符以什么结尾
+
+join():例子被called是插入的中间str，arguments是list
+>>> ', '.join(['cats', 'rats', 'bats']) 
+'cats, rats, bats'
+
+split():被调用的是句子，argument是中间分割的str
+>>> 'MyABCnameABCisABCSimon'.split('ABC') 
+['My', 'name', 'is', 'Simon']
+常用来分割\n
+
+string.rjust(length, str):原始string填充到length长度居右侧，用str填充
+string.ljust(length, str):原始string填充到length长度居左侧，用str填充
+string.center(length, str):原始string填充到length长度居中间，用str填充
+
+XY坐标转换函数代码：
+def trans(x, y):
+    X = str(int(x*1000)).rjust(6, '0')
+    Y = str(int(y*1000)).rjust(6, '0')
+    return X+'XY'+Y
+
+strip():返回参数,剥离所有space
+
+import sys
+argv[0]是文件名称
+argv[1]是输入的第一个参数
+
+import pyperclip
+ 实现剪贴板的操作
+pyperclip.copy()把内容复制到剪贴板
+pyperclip.paster()把剪贴板内容复制出来
+
+
+
