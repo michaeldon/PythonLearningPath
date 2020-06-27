@@ -1,0 +1,24 @@
+import os
+os.getcwd():获取现在的工作文件夹的位置
+os.chdir():变更文件夹位置
+. 意味着当前文件夹位置
+.. 意味着parent folder
+
+>>> os.path.join('usr', 'bin', 'spam') #这个函数可以把几个文件参数连接一起形成在任何系统的有效路径
+'usr\\bin\\spam'
+
+>>> path = 'C:\\Windows\\System32\\calc.exe' 
+>>> os.path.basename(path)#列出最终文件名
+'calc.exe'
+>>> os.path.dirname(path) #列出目录
+'C:\\Windows\\System32'
+
+>>> calcFilePath.split(os.path.sep) #这个函数可以把路径切分开来
+['C:', 'Windows', 'System32', 'calc.exe']
+>>> '/usr/bin'.split(os.path.sep) 
+['', 'usr', 'bin']
+
+os.path.getsize(path):可以获取路径里面文件的大小
+os.listdir(path):可以列出路径里面所有文件
+
+os.mkdir():可以新建文件夹
